@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup Form</title>
+    <script>
+        function singup(){
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var messages = "Congratulations (" + firstName + ") (" + lastName + ") you are now singed up!";
+            document.getElementById("messages").innerHTML = messages;
+            document.getElementById("messages").style.display = "block";
+        }
+    </script>
+    <style>
+        #messages{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+        }
+        input{
+            width:200px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background-color: #00c3ffc7;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages" style="display:none;"></div>
+
+    <form action="#" method="post">
+        <label for="name">First Name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" >
+        <br>
+        <label for="name">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" >
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" >
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" >
+        <br>
+        <label for="cpassword">Confirm Password:</label>
+        <input type="password" name="cpassword" id="cpassword" placeholder="Enter your password again" >
+        <br>
+        <button type="button" onclick="singup();">Sing Up</button>
+    </form>
+</body>
+</html>
